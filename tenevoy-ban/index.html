@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>У веток нет охвата? Ответ самой Meta</title>
+<meta name="description" content="Ветки выходят, а охвата нет. С чем это связано и как снять теневой бан: ответ Meta AI скринами, без правок. И приглашение на интенсив по Threads 12 сентября.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="У веток нет охвата? Это теневой бан. Ответ самой Meta">
+<meta property="og:description" content="Не мои догадки, а ответ Meta AI скринами: с чем связано падение охвата и как его вернуть.">
+<meta property="og:image" content="https://threads.kristinabriin.com/tenevoy-ban/img/meta-2-kak-ubrat.jpg">
+<meta property="og:url" content="https://threads.kristinabriin.com/tenevoy-ban/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧵</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --ground:#f4efe7;
+  --panel:#f2eadf;
+  --fg:#211c19;
+  --fg-muted:#6b6259;
+  --wine:#7a252a;
+  --gold:#d7c29f;
+  --gold-ink:#251f1a;
+  --line:rgba(33,28,25,.14);
+  --hero-1:#27221f;
+  --hero-2:#171513;
+  --serif:Prata,"Iowan Old Style",Palatino,Georgia,serif;
+  --sans:Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#171513;--panel:#211e1c;--fg:#f4efe7;--fg-muted:#c3b8ab;
+    --wine:#d7c29f;--line:rgba(255,255,255,.14);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#171513;--panel:#211e1c;--fg:#f4efe7;--fg-muted:#c3b8ab;
+  --wine:#d7c29f;--line:rgba(255,255,255,.14);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:680px;margin:0 auto;padding:36px 20px 72px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.2;margin:0}
+h1{font-size:clamp(1.8rem,5.5vw,2.5rem);line-height:1.12;margin-bottom:14px;text-wrap:balance}
+h2{font-size:clamp(1.35rem,3.5vw,1.7rem);margin:40px 0 14px;text-wrap:balance}
+p{margin:0 0 16px}
+em{color:var(--wine);font-style:italic}
+strong{font-weight:700}
+a{color:var(--wine);text-underline-offset:3px;overflow-wrap:anywhere}
+.kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--wine);font-weight:700;margin-bottom:14px}
+.sub{color:var(--fg-muted);font-size:1.02rem;margin-bottom:28px}
+.lead{font-size:1.08rem}
+
+.shot{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:10px;margin:22px 0 8px}
+.shot img{display:block;width:100%;height:auto;border-radius:10px}
+.cap{font-size:.86rem;color:var(--fg-muted);margin:0 0 22px 4px}
+.cap b{color:var(--wine);font-weight:700}
+
+.note{border-left:3px solid var(--gold);padding:4px 0 4px 18px;margin:24px 0;color:var(--fg-muted)}
+.note b{color:var(--fg)}
+
+.figs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+@media (max-width:520px){.figs{grid-template-columns:1fr 1fr}}
+.fig{background:var(--panel);border-radius:14px;padding:14px 14px 12px}
+.fig b{display:block;font-family:var(--serif);font-weight:400;color:var(--wine);font-size:1.35rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.fig span{display:block;margin-top:5px;font-size:.85rem;color:var(--fg-muted)}
+
+.cta{
+  margin:44px 0 0;border-radius:20px;padding:34px 26px;text-align:center;
+  color:#fffaf2;
+  background-image:radial-gradient(circle at 78% 8%,rgba(185,154,107,.22),rgba(0,0,0,0) 36%),linear-gradient(135deg,var(--hero-1),var(--hero-2));
+}
+.cta .kicker{color:var(--gold)}
+.cta h2{color:#fffaf2;margin:0 0 10px}
+.cta .when{font-family:var(--serif);color:var(--gold);font-size:1.25rem;margin:0 0 16px}
+.cta p{color:#d8cec2;margin:0 auto 22px;max-width:520px}
+.cta p b{color:#fffaf2}
+.btn{
+  display:inline-block;background:var(--gold);color:var(--gold-ink);text-decoration:none;
+  font-weight:700;font-size:1.05rem;padding:15px 30px;border-radius:999px;
+  transition:transform .2s ease,background .2s ease;
+}
+.btn:hover{transform:translateY(-1px);background:#e4d3ae}
+.cta small{display:block;margin-top:14px;color:#a89d8f;font-size:.85rem}
+
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--fg-muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kicker">Ответ Meta, скринами</div>
+  <h1>Ветки выходят, а охвата нет? Это теневой бан. Вот что говорит сама Meta</h1>
+  <p class="sub">С чем связано падение охвата и как его вернуть. Не мои догадки, а ответ Meta AI скринами, без правок.</p>
+
+  <p class="lead">Знакомая картина: пишете каждый день, а у веток 100–200 просмотров. Вчера было пять тысяч, сегодня ноль. Лайки от одних и тех же, в личку никто не приходит. И непонятно, что вы сделали не так.</p>
+  <p>Я не стала гадать и отвечать от себя. Спросила у Meta напрямую: Meta AI отвечает в Threads под своим именем с галочкой. Ниже его ответ скринами, без единой правки. Чтобы было видно: <em>это не я придумала, это ответ Meta</em>.</p>
+
+  <h2>С чем связано и как убрать</h2>
+
+  <div class="shot"><img src="img/meta-2-kak-ubrat.jpg" alt="Ответ Meta AI в Threads: теневого бана официально не существует, так называют резкое падение охвата из-за нарушений. Как убрать: стоп на 48–72 часа, проверить статус аккаунта, убрать накрутки и отвязать сервисы, почистить хештеги." loading="lazy"></div>
+  <p class="cap"><b>Скрин 1.</b> Ответ Meta AI на вопрос «как убрать теневой бан с аккаунта». Первые четыре шага.</p>
+
+  <div class="shot"><img src="img/meta-3-punkt-5.jpg" alt="Ответ Meta AI, продолжение: перейти на личный аккаунт на 3–4 дня и обратно, две недели только белый контент, без ссылок в описании, отвечать на все комментарии в первый час. Если через 14 дней охват не вернулся, написать в поддержку." loading="lazy"></div>
+  <p class="cap"><b>Скрин 2.</b> Пятый шаг и что делать следующие две недели.</p>
+
+  <div class="note"><b>На что смотреть в первую очередь.</b> Пункт три: чаты активности, сервисы накрутки, боты, которые лайкают и подписываются. Meta называет это главной причиной. И последняя фраза: две недели живого контента и ответы на все комментарии в первый час. Охват возвращается не от хитростей, а от живой работы в аккаунте.</div>
+
+  <h2>И ещё один вопрос, который задают реже</h2>
+
+  <p>Могут ли закрыть аккаунт, если подписчики пришли очень быстро. Спросила и это.</p>
+
+  <div class="shot"><img src="img/meta-1-bystryy-rost.jpg" alt="Ответ Meta AI в Threads: да, могут, алгоритмы видят резкий рост как накрутку. Особенно рискуют боты, гивы, массфолл, чаты активности и покупка подписчиков. Безопасный рост, когда подписчики приходят с охватов." loading="lazy"></div>
+  <p class="cap"><b>Скрин 3.</b> Ответ Meta AI на вопрос «если очень быстро набрать подписчиков, могут закрыть аккаунт?»</p>
+
+  <p>Опасен не быстрый рост, а его источник. Если люди пришли с охватов, рост может быть каким угодно быстрым.</p>
+
+  <h2>Вот так мы умеем</h2>
+
+  <p>Блог нутрициолога, с нуля, за три недели. Подписчики пришли с охватов, ровно так, как советует Meta:</p>
+
+  <div class="figs">
+    <div class="fig"><b>1 млн</b><span>просмотров за месяц</span></div>
+    <div class="fig"><b>815</b><span>подписчиков за три недели</span></div>
+    <div class="fig"><b>1 400</b><span>человек в боте</span></div>
+  </div>
+
+  <p>Профиль открыт, проверяется за минуту: <a href="https://www.threads.com/@kristinabriin" target="_blank" rel="noopener">threads.com/@kristinabriin</a>.</p>
+
+  <div class="cta">
+    <div class="kicker">Интенсив по Threads</div>
+    <h2>Ветки, которые залетают и приносят оплаты</h2>
+    <p class="when">Суббота, 12 сентября, 12:00 мск</p>
+    <p>Снять бан это полдела. Дальше нужны ветки, которые набирают охват и превращают его в оплаты. Разберу, как они устроены, на живых примерах. <b>Это будут лучшие два часа, которые вы инвестируете в своё продвижение.</b></p>
+    <a class="btn" href="https://t.me/+eCr1yvQVwXs2NDhk" target="_blank" rel="noopener">Забрать место на интенсиве</a>
+    <small>Интенсив пройдёт в моём канале в Telegram. Подпишитесь, и вы уже на месте.</small>
+  </div>
+
+  <footer>
+    Скриншоты: ответы Meta AI в Threads, сентябрь 2026, без правок. Текст: Кристина Бриин.
+  </footer>
+
+</div>
+</body>
+</html>
